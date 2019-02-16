@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         //получение данных из второй Activity
-        if (requestCode == 1) {
+        if (resultCode == RESULT_OK) {
             ArrayList<String> arrayList = data.getStringArrayListExtra("1");
             myAdapter = new MyAdapter(arrayList);
             recyclerView.setAdapter(myAdapter);

@@ -40,6 +40,12 @@ public class SecondActivity extends AppCompatActivity {
         });
 
         //регистрация слушателя
+      // LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, new IntentFilter("any_action"));
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, new IntentFilter("any_action"));
     }
 
